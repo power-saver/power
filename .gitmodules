@@ -1,0 +1,6 @@
+[submodule "power_front"]
+	path = power_front
+	url = https://github.com/power-saver/power_front.git
+[submodule "power_app"]
+	path = power_app
+	url = https://github.com/power-saver/power_app.git

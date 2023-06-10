@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+        - mynetwork
+  pythonapp:
+    build:
+      context: ./power_app
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
+    volumes:
+      - ./city_coordinates.json:/user/city_coordinates.json
+    networks:
+        - mynetwork
+  vueapp:
+    build:
+      context: ./power_front
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
