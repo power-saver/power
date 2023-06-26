@@ -15,6 +15,12 @@
     git clone https://github.com/power-saver/power_front.git
     ```
 
+3. init data load
+    ```
+    docker exec -it {pythonapp's container id} /bin/bash
+    python load.py
+    ```
+
 # Usage
 - 도커 이미지 빌드 및 컨테이너 실행
     ```shell
@@ -28,4 +34,7 @@
     ```shell
     $ docker-compose down
     ```
+
+# preview 
+![image](./image.png)
 
