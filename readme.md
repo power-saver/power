@@ -1,5 +1,13 @@
 # Getting Started
 
+## Stack
+* fastapi
+* mongodb
+* vuejs
+* docker
+* gcp
+
+
 ## Prerequisites
 - Docker 
 
